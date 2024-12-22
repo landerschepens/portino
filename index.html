@@ -1,33 +1,103 @@
-<!doctype html>
-<html class="no-js" lang="">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
-  <link rel="stylesheet" href="css/style.css">
-  <meta name="description" content="">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manual</title>
+  <style>
+    :root {
+      --bg-color: #202123;
+      --text-color: #ececec;
+      --accent-color: #10a37f;
+      --header-color: #3e3f42;
+      --link-color: #1e9dff;
+      --border-color: #3e3f42;
+    }
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:alt" content="">
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
 
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="icon.png">
+    header {
+      background-color: var(--header-color);
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid var(--border-color);
+    }
 
-  <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#fafafa">
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: var(--accent-color);
+    }
+
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #2c2c2e;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+    }
+
+    h2 {
+      color: var(--accent-color);
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin: 5px 0;
+    }
+
+    footer {
+      text-align: center;
+      margin: 20px 0;
+      color: #aaa;
+    }
+  </style>
 </head>
-
 <body>
+<header>
+  <h1>Manual Title</h1>
+</header>
+<main>
+  <h2>Section 1: Introduction</h2>
+  <p>Welcome to the manual. This document will guide you through the rules and procedures in a clear and concise manner.</p>
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate. Test to commit and push</p>
-  <script src="js/app.js"></script>
+  <h2>Section 2: Rules</h2>
+  <p>Below are the main rules to keep in mind:</p>
+  <ul>
+    <li>Rule 1: Always follow the guidelines.</li>
+    <li>Rule 2: Be respectful to others.</li>
+    <li>Rule 3: Maintain clarity in all communications.</li>
+  </ul>
 
+  <h2>Section 3: Additional Information</h2>
+  <p>For more information, feel free to <a href="#">visit our website</a> or contact support.</p>
+</main>
+<footer>
+  &copy; 2024 Manual Company. All rights reserved.
+</footer>
 </body>
-
 </html>
