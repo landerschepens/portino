@@ -170,6 +170,23 @@
       border: 1px solid var(--border-color);
       border-radius: 8px;
     }
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #007bff;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      display: none; /* Hidden by default */
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    #backToTop:hover {
+      background-color: #0056b3;
+    }
   </style>
 </head>
 <body>
@@ -181,7 +198,7 @@
   <a href="#how-to-sauna">Sauna/Hamam</a>
   <a href="#how-to-book">Reserveren</a>
   <a href="#how-to-2fa">Registeren</a>
-  <a href="https://outlook.office365.com/book/PORTINOWELLNESS@residentie-portino.be">Applicatie</a>
+  <a href="https://outlook.office365.com/book/PORTINOWELLNESS@residentie-portino.be">App</a>
 </nav>
 <main>
   <h2>Huisreglement</h2>
@@ -416,10 +433,32 @@
     </li>
   </ul>
   <p style="text-align: center"><b>ENJOY !</b></p>
+  <div id="backToTop">↑ Back to Top</div>
 </main>
 <footer>
   &copy; Portino RVME All rights reserved.
 </footer>
+<script>
+  // Select the Back to Top button
+  const backToTopButton = document.getElementById("backToTop");
+
+  // Show the button when the user scrolls down
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      backToTopButton.style.display = "block";
+    } else {
+      backToTopButton.style.display = "none";
+    }
+  });
+
+  // Scroll back to the top when the button is clicked
+  backToTopButton.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+</script>
 </body>
 </html>
 
