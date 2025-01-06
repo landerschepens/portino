@@ -48,12 +48,10 @@
     }
     /* voor als je geen bg image gebruikt */
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
       background-color: var(--bg-color);
       color: var(--text-color);
       line-height: 1.6;
-
     }
 
 
@@ -73,6 +71,11 @@
       padding: 20px;
       text-align: center;
       border-bottom: 1px solid var(--border-color);
+    }
+    .stayOnTop {
+    transition: transform 1s ease, opacity 1s ease;
+      z-index: 1000;
+      background-color: var(--accent-color);
     }
 
     nav {
@@ -204,25 +207,27 @@
   </style>
 </head>
 <body>
+<div id="stayOnTop" class="stayOnTop">
 <header>
   <h1>Residentie Portino - Wellness</h1>
 </header>
 <nav>
   <a href="#huisreglement">Huisreglement</a>
   <a href="#how-to-sauna">Sauna/Hamam</a>
-  <a href="#lopende-acties">Lopende Acties</a>
-  <a href="#how-to-book">Registratie</a>
+  <a href="#how-to-book">Registreren</a>
   <!-- <a href="#how-to-2fa">2FA authenticatie</a>  in mijn ogen overbodig !-->
   <a href="#reserveren">Reserveren</a>
+  <a href="#lopende-acties">Lopende Acties</a>
   <a href="https://outlook.office365.com/book/PORTINOWELLNESS@residentie-portino.be">App</a>
 </nav>
+</div>
 <main>
   <h2>Huisreglement</h2>
   <p>Om alles vlot en respectvol te laten verlopen, vragen wij aan alle mede-eigenaars om volgende afspraken strikt na
     te leven:</p>
   <ul>
     <li>Reservatie van de wellness kan enkel via de app voor de geregistreerde eigenaars en lange termijn verblijvers
-      (>6maanden). Zie <a href="#how-to-book">Registratie</a>. Gelieve ervoor te zorgen dat de wellness steeds net
+      (>6maanden). Zie <a href="#how-to-book">Registreren</a>. Gelieve ervoor te zorgen dat de wellness steeds net
       en tijdig vrijgemaakt wordt. Voor maximale beschikbaarheid vragen wij u bij annulatie dit 24 uur vòòr uw bezoek te
       doen.
     </li>
@@ -319,22 +324,6 @@
       manueel uitzetten.
     </li>
   </ul>
-  <h2 id="lopende-acties">Wellness - Lopende Acties</h2>
-  <ul>
-    <li>Er loopt momenteel nog een heikele correctieve actie: de hoofdteller van de wellness dient door de energie-leverancier verzwaard te worden. Daarom is momenteel enkel de Sauna actief. Van zodra de nodige aanpassingen doorgevoerd zijn zullen zowel de sauna als de hamam tegelijk kunnen gebruikt worden.</li>
-    <li>De wellness werd voorlopig opgeleverd, maar er zijn nog een aantal punten die openstaan. Deze worden actief opgevolgd met verwachte uitvoering begin dit jaar. Zo zal u o.a. merken dat:
-      <ul>
-        <li>Sommige flexibele voegen in de vloer en aan de ramen losgekomen zijn of niet netjes zijn. Deze worden allemaal vervangen.</li>
-        <li>Er een toiletpapier houder ontbreekt in het damestoilet alsook een reserve rolhouder in beide toiletten. Voorlopig liggen deze even los.</li>
-        <li>Er nog geen symbolen (Dames-Heren) op toiletten &amp; douches werden aangebracht. Deze komen er aan.</li>
-        <li>Schilderwerk hier en daar dient bijgewerkt te worden.</li>
-        <li>Er momenteel een draaiknop ontbreekt aan de binnenkant slot wellness. Zorg dus steeds dat u de sleutel bij u heeft.</li>
-        <li>Deurstops ontbreken. Opgepast bij open deuren!</li>
-      </ul>
-    </li>
-    <li>Wij zitten in een opstart &amp; testfase. Jullie constructieve feedback (via onze VME-Whatsapp) is welkom. Wij doen ons best om alle nog openstaande punten of aanpassingen zo snel mogelijk door te voeren. Feedback voor de Wellness reservatie app kan ook per email verstuurd worden naar <a href="mailto:admin.portino@residentie-portino.be">admin.portino@residentie-portino.be</a>.</li>
-    <li>De wellness zal regelmatig gepoetst worden. Momenteel is dit gepland om de 14 dagen. De frequentie zal naar de toekomst toe afgestemd worden volgens noodzaak. Evenwel wordt iedereen geacht de wellness in zijn geheel netjes te houden alsook correct en met respect te gebruiken.</li>
-  </ul>
   <h2 id="how-to-book"></h2>
   <h2>Reservatie-App Wellness</h2>
   <p>Een reservatie-App werd opgebouwd. Hierbij een korte toelichting:</p>
@@ -352,7 +341,7 @@
     <li>Enkel eigenaars en lange termijn huurders (momenteel vastgelegd op minimaal 6 maanden) kunnen login en wachtwoord aanvragen.</li>
     <li>Eens geregistreerd – opgepast tweevoudige verificatie noodzakelijk, zie hierna - zal u een uniek login en wachtwoord ontvangen die u dient bij te houden en te gebruiken om een reservatie aan te maken.</li>
     <li>U kan vervolgens inloggen op onze reservatie-app om een reservatie aan te maken via de link:
-      <a href="https://residentie-portino.be/wellness" target="_blank">https://residentie-portino.be/wellness</a>
+      <a href="https://outlook.office365.com/book/PORTINOWELLNESS@residentie-portino.be" target="_blank">App</a>
     </li>
   </ul>
 
@@ -437,6 +426,22 @@
     <li>De wellness is toegankelijk van 8u tot 22u. De laatste reservatie is mogelijk om 20u.</li>
     <li>Looptijden van reservaties en systemen zijn vast geprogrammeerd. Deze instellingen kunnen - na uittesten van het systeem – in overleg bijgestuurd worden.</li>
   </ul>
+  <h2 id="lopende-acties">Wellness - Lopende Acties</h2>
+  <ul>
+    <li>Er loopt momenteel nog een heikele correctieve actie: de hoofdteller van de wellness dient door de energie-leverancier verzwaard te worden. Daarom is momenteel enkel de Sauna actief. Van zodra de nodige aanpassingen doorgevoerd zijn zullen zowel de sauna als de hamam tegelijk kunnen gebruikt worden.</li>
+    <li>De wellness werd voorlopig opgeleverd, maar er zijn nog een aantal punten die openstaan. Deze worden actief opgevolgd met verwachte uitvoering begin dit jaar. Zo zal u o.a. merken dat:
+      <ul>
+        <li>Sommige flexibele voegen in de vloer en aan de ramen losgekomen zijn of niet netjes zijn. Deze worden allemaal vervangen.</li>
+        <li>Er een toiletpapier houder ontbreekt in het damestoilet alsook een reserve rolhouder in beide toiletten. Voorlopig liggen deze even los.</li>
+        <li>Er nog geen symbolen (Dames-Heren) op toiletten &amp; douches werden aangebracht. Deze komen er aan.</li>
+        <li>Schilderwerk hier en daar dient bijgewerkt te worden.</li>
+        <li>Er momenteel een draaiknop ontbreekt aan de binnenkant slot wellness. Zorg dus steeds dat u de sleutel bij u heeft.</li>
+        <li>Deurstops ontbreken. Opgepast bij open deuren!</li>
+      </ul>
+    </li>
+    <li>Wij zitten in een opstart &amp; testfase. Jullie constructieve feedback (via onze VME-Whatsapp) is welkom. Wij doen ons best om alle nog openstaande punten of aanpassingen zo snel mogelijk door te voeren. Feedback voor de Wellness reservatie app kan ook per email verstuurd worden naar <a href="mailto:admin.portino@residentie-portino.be">admin.portino@residentie-portino.be</a>.</li>
+    <li>De wellness zal regelmatig gepoetst worden. Momenteel is dit gepland om de 14 dagen. De frequentie zal naar de toekomst toe afgestemd worden volgens noodzaak. Evenwel wordt iedereen geacht de wellness in zijn geheel netjes te houden alsook correct en met respect te gebruiken.</li>
+  </ul>
   <p style="text-align: center"><b>ENJOY !</b></p>
   <div id="backToTop">↑ Back to Top</div>
 </main>
@@ -463,6 +468,30 @@
       behavior: "smooth",
     });
   });
+
+  //Sticky navbar
+  // Get the navbar element
+  const navbar = document.getElementById("stayOnTop");
+
+  // Get the initial offset of the navbar from the top
+  const sticky = navbar.offsetTop;
+  // Define the scroll threshold (in pixels) for activation
+  const scrollThreshold = 200;
+  // Function to make the navbar sticky
+  function stickyNavbar() {
+    if (window.scrollY >= sticky + scrollThreshold) {
+      navbar.style.position = "fixed";
+      navbar.style.top = "0";
+      navbar.style.width = "100%";
+    } else {
+      navbar.style.position = "static"; // Default position
+    }
+  }
+
+  // Add event listener to scroll
+  window.onscroll = function() {
+    stickyNavbar();
+  };
 </script>
 </body>
 </html>
