@@ -7,11 +7,48 @@
   <title>Residentie Portino</title>
   <style>
     /* Style for the body to remove margin and ensure full screen */
-    body, html {
-      height: 100%;
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #2e2e2e;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
       margin: 0;
-      padding: 0;
     }
+
+    /* this section is for typing effect */
+    :root {
+      --bg-color: #f5f5f5;
+      --text-color: #333333;
+      --accent-color: #2491d4;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: var(--accent-color);
+      display: inline-block;
+      border-right: 2px solid transparent; /* For cursor effect */
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    header h1.typing {
+      border-right: 2px solid var(--accent-color);
+      animation: blink-cursor 0.7s steps(1) infinite;
+    }
+
+    @keyframes blink-cursor {
+      from {
+        border-right-color: var(--accent-color);
+      }
+      to {
+        border-right-color: transparent;
+      }
+    }
+    /* this is the end of typing effect section */
 
     /* The image will fill the entire screen */
     .full-screen-image {
@@ -22,10 +59,146 @@
       width: 100%;
       height: 100vh;
     }
+    /* Styling for the hero section */
+    .hero-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url('/img/Portino_root.webp') no-repeat center center;
+      background-size: cover;
+      color: white;
+      text-align: center;
+    }
+
+    #title {
+      font-family: 'Georgia', serif;
+      font-size: 4rem;
+    }
+
+    /* Keyframes for fade-in animation */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+ /* button section */
+    .button-container {
+      text-align: center;
+    }
+
+    .btn {
+      background-color: #444;
+      color: #fff;
+      border: 2px solid #666;
+      padding: 12px 24px;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn:hover {
+      background-color: #666;
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .btn:active {
+      transform: translateY(1px);
+    }
+
+    /* Ripple effect styles */
+    .ripple {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      pointer-events: none;
+      animation: ripple-animation 0.6s ease-out;
+      transform: scale(0);
+    }
+
+    @keyframes ripple-animation {
+      to {
+        transform: scale(15);
+        opacity: 0;
+      }
+    }
+    /* end button section */
   </style>
 </head>
 
 <body>
-<div class="full-screen-image"></div>
+<div class="full-screen-image">
+  <div class="hero-section">
+    <div class="button-container">
+    <h1 id="title">Residentie Portino</h1>
+      <button class="btn" id="ripple-button"><a href="/wellness.html"></a>Wellness</button>
+    </div>
+  </div>
+  </div>
+
 </body>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const titleElement = document.getElementById("title");
+    const fullText = `Residentie Portino`;
+    let currentText = "";
+    let index = 0;
+
+    // Add the "typing" class for the cursor effect
+    titleElement.classList.add("typing");
+
+    function typeLetter() {
+      if (index < fullText.length) {
+        currentText += fullText[index];
+        titleElement.textContent = currentText;
+        index++;
+        setTimeout(typeLetter, 100); // Adjust typing speed here
+      } else {
+        // Remove cursor after finishing typing
+        titleElement.classList.remove("typing");
+      }
+    }
+
+    typeLetter();
+  });
+  /* BUTTON JS */
+  document.getElementById("ripple-button").addEventListener("click", function (e) {
+    const button = e.currentTarget;
+
+    // Create ripple element
+    const ripple = document.createElement("span");
+    ripple.classList.add("ripple");
+
+    // Position the ripple
+    const rect = button.getBoundingClientRect();
+    const rippleSize = Math.max(rect.width, rect.height);
+    ripple.style.width = ripple.style.height = `${rippleSize}px`;
+
+    const x = e.clientX - rect.left - rippleSize / 2;
+    const y = e.clientY - rect.top - rippleSize / 2;
+    ripple.style.left = `${x}px`;
+    ripple.style.top = `${y}px`;
+
+    // Add ripple to the button
+    button.appendChild(ripple);
+
+    // Remove the ripple after animation
+    ripple.addEventListener("animationend", () => ripple.remove());
+  });
+
+  /* end of button js */
+</script>
 </html>
