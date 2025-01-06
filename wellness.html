@@ -16,7 +16,11 @@
       --border-color: white;
       --hover-bg-color: #80b9f1;
     }
-
+  /* FONT*/
+    @font-face {
+      font-family: 'NettoOT'; /* Choose a name for the font */
+      src: url('/fonts/NettoOT.otf') format('opentype');
+    }
     /* Ensure the body takes up the full screen */
     html, body {
       height: 100%;
@@ -25,7 +29,7 @@
 
     /* voor als je geen bg image gebruikt */
     body {
-      font-family: Arial, sans-serif;
+      font-family: "NettoOT",serif;
       background-color: var(--bg-color);
       color: var(--text-color);
       line-height: 1.6;
@@ -202,10 +206,10 @@
   </style>
 </head>
 <body>
-<div id="stayOnTop" class="stayOnTop">
 <header>
   <h1>Residentie Portino - Wellness</h1>
 </header>
+<div id="stayOnTop" class="stayOnTop">
 <nav>
   <a href="#huisreglement">Huisreglement</a>
   <a href="#how-to-sauna">Sauna/Hamam</a>
@@ -217,7 +221,7 @@
 </nav>
 </div>
 <main>
-  <h2>Huisreglement</h2>
+  <h2 id="huisreglement">Huisreglement</h2>
   <p>Om alles vlot en respectvol te laten verlopen, vragen wij aan alle mede-eigenaars om volgende afspraken strikt na
     te leven:</p>
   <ul>
@@ -262,12 +266,12 @@
       te worden en mogen niet uit de wellnessruimte verwijderd worden.
     </li>
     <li>Wanneer de wellness-vloer extreem nat werd gemaakt dient deze na afloop van de sessie terug droog gemaakt te
-      worden. Zeker na gebruik van de hamam - veel stoom & condens ontwikkeling - dient de hamam en de vloer in de hall
+      worden. Zeker na gebruik van de Hamam - veel stoom & condens ontwikkeling - dient de Hamam en de vloer in de hall
       thv hamam met de voorziene witte vloer-&muur trekker (klein en groot formaat) gedroogd te worden. Er is ook een
       blauwe microvezeldoek aanwezig om toestellen af te drogen. Gelieve het voorziene materiaal steeds terug op zijn
       plaats te hangen.
     </li>
-    <li>Na gebruik dienen de deuren van de sauna en de hamam STEEDS GESLOTEN te worden evenals alle deuren (douches &
+    <li>Na gebruik dienen de deuren van de sauna en de Hamam STEEDS GESLOTEN te worden evenals alle deuren (douches &
       toiletten) en ramen in de wellness.
     </li>
     <li>Respecteer de gereserveerde tijd en zorg dat alle toestellen (deze schakelen automatisch uit) & ruimtes netjes
@@ -279,7 +283,7 @@
     </li>
   </ul>
   <p style="text-align: center">Geniet van uw sessie: mens sana in corpore sano!</p>
-  <h2 id="how-to-sauna">Activatie Sauna en/of hamam</h2>
+  <h2 id="how-to-sauna">Activatie Sauna en/of Hamam</h2>
   <p>Bij het betreden van de wellness zal de verlichting automatisch activeren. Eens geactiveerd, blijft de verlichting
     actief voor minimaal 30 minuten (indien geen beweging in ruimte).
   </p>
@@ -319,11 +323,8 @@
       manueel uitzetten.
     </li>
   </ul>
-  <h2 id="how-to-book"></h2>
-  <h2>Reservatie-App Wellness</h2>
-  <p>Een reservatie-App werd opgebouwd. Hierbij een korte toelichting:</p>
-
-  <h2>Eénmalige registratie:</h2>
+  <h2 id="how-to-book">Registreren</h2>
+  <h2>Eénmalige registratie</h2>
   <ul>
     <li>Vòòr uw eerste gebruik dient u zich éénmalig te registreren. U dient hiertoe een mail te sturen naar
       <a href="mailto:admin.portino@residentie-portino.be">admin.portino@residentie-portino.be</a> met vermelding van:
@@ -340,7 +341,7 @@
     </li>
   </ul>
 
-  <h2 id="how-to-2fa">Tweevoudige verificatie:</h2>
+  <h2 id="how-to-2fa">Tweevoudige verificatie</h2>
   <p>Als extra beveiliging moet uw login van een tweevoudige verificatie (2FA) voorzien worden. Hieronder vindt u de stappen die u hiervoor (eenmalig) moet doorlopen. U gebruikt hiervoor best een laptop of vaste computer. U heeft 14 dagen de tijd om de registratie uit te voeren, daarna zal u niet meer kunnen inloggen zonder eerst de registratie te hebben doorlopen.</p>
   <p>Bij het inloggen in de reservatie-app voert u uw loginnaam in: <strong>admin-x.x@residentie-portino.be</strong> waarbij <em>x.x</em> overeenstemt met het nummer van uw appartement.</p>
 
@@ -387,10 +388,10 @@
   <div class="image">
     <img src="/img/manual_11_portino.png" alt="2FA successfully enabled">
   </div>
-  <h2 id="reserveren">Reservatie aanmaken:</h2>
+  <h2 id="reserveren">Reserveren</h2>
   <ul>
     <li>Eens geregistreerd kunt u vlot een reservatie aanmaken door in te loggen op onze reservatie-app via de link:
-      <a href="https://residentie-portino.be/wellness" target="_blank">https://residentie-portino.be/wellness</a>
+      <a href="https://outlook.office365.com/book/PORTINOWELLNESS@residentie-portino.be" target="_blank">App</a>
     </li>
     <li>De reservatie-app zal u volgende informatie vragen:
       <ul>
@@ -423,7 +424,7 @@
   </ul>
   <h2 id="lopende-acties">Wellness - Lopende Acties</h2>
   <ul>
-    <li>Er loopt momenteel nog een heikele correctieve actie: de hoofdteller van de wellness dient door de energie-leverancier verzwaard te worden. Daarom is momenteel enkel de Sauna actief. Van zodra de nodige aanpassingen doorgevoerd zijn zullen zowel de sauna als de hamam tegelijk kunnen gebruikt worden.</li>
+    <li>Er loopt momenteel nog een heikele correctieve actie: de hoofdteller van de wellness dient door de energie-leverancier verzwaard te worden. Daarom is momenteel enkel de Sauna actief. Van zodra de nodige aanpassingen doorgevoerd zijn zullen zowel de sauna als de Hamam tegelijk kunnen gebruikt worden.</li>
     <li>De wellness werd voorlopig opgeleverd, maar er zijn nog een aantal punten die openstaan. Deze worden actief opgevolgd met verwachte uitvoering begin dit jaar. Zo zal u o.a. merken dat:
       <ul>
         <li>Sommige flexibele voegen in de vloer en aan de ramen losgekomen zijn of niet netjes zijn. Deze worden allemaal vervangen.</li>
@@ -471,7 +472,7 @@
   // Get the initial offset of the navbar from the top
   const sticky = navbar.offsetTop;
   // Define the scroll threshold (in pixels) for activation
-  const scrollThreshold = 200;
+  const scrollThreshold = 0;
 
   // Function to handle the sticky navbar behavior
   function stickyNavbar() {
@@ -512,7 +513,59 @@
 
   // Attach the scroll event listener
   window.addEventListener("scroll", stickyNavbar);
+//navigating issue
+  // Function to handle smooth scrolling with offset
+  function handleSmoothScroll(event) {
+    event.preventDefault(); // Prevent default jump behavior
 
+    const targetId = this.getAttribute("href").substring(1); // Get the target ID
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      // Calculate the position with an offset
+      const offset = 100; // Adjust as needed
+      const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - offset;
+
+      // Smoothly scroll to the position
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+
+      // Update the URL hash (optional)
+      history.pushState(null, null, `#${targetId}`);
+    }
+  }
+
+  // Attach the smooth scroll handler to both navbars
+  function attachSmoothScrollToNavbars() {
+    // Select links from both original and cloned navbars
+    const navbarLinks = document.querySelectorAll("a[href^='#']");
+
+    navbarLinks.forEach(link => {
+      link.addEventListener("click", handleSmoothScroll);
+    });
+  }
+
+  // Call this function once the page is loaded
+  document.addEventListener("DOMContentLoaded", attachSmoothScrollToNavbars);
+
+  // Reattach the smooth scroll handler to cloned navbar dynamically
+  const observer = new MutationObserver(() => {
+    const cloneNavbar = document.getElementById("stayOnTopClone");
+    if (cloneNavbar) {
+      // Attach smooth scroll to the clone navbar links
+      const cloneLinks = cloneNavbar.querySelectorAll("a[href^='#']");
+      cloneLinks.forEach(link => {
+        link.removeEventListener("click", handleSmoothScroll); // Avoid duplicate handlers
+        link.addEventListener("click", handleSmoothScroll);
+      });
+    }
+  });
+
+  // Observe changes in the DOM to detect when the clone is added
+  observer.observe(document.body, { childList: true, subtree: true });
 </script>
 </body>
 </html>
