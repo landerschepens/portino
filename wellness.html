@@ -23,29 +23,6 @@
       margin: 0;
     }
 
-    /* Full screen div with background image */
-    .full-screen-image {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url('/img/Portino_wellness.jpg'); /* Replace with your image URL */
-      background-size: cover;
-      background-position: center;
-      z-index: 0; /* Behind the overlay */
-    }
-
-    /* Overlay with black color at 80% opacity */
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.8); /* Black with 80% opacity */
-      z-index: 1; /* In front of the background image */
-    }
     /* voor als je geen bg image gebruikt */
     body {
       font-family: Arial, sans-serif;
@@ -72,16 +49,32 @@
       text-align: center;
       border-bottom: 1px solid var(--border-color);
     }
-    .stayOnTop {
-    transition: transform 1s ease, opacity 1s ease;
-      z-index: 1000;
-      background-color: var(--accent-color);
+    #stayOnTop {
+      /* Optional: Add any styles for the original navbar */
     }
+
+    /* Styling for the cloned navbar */
+    /* Styling for the cloned navbar */
+    /* Styling for the cloned navbar */
+    .sticky-clone {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      opacity: 0; /* Start fully transparent */
+      transform: translateY(-100%); /* Start off-screen (above the viewport) */
+      z-index: 10;
+      transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Smooth slide and fade */
+      background-color: white; /* Adjust as needed */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: add shadow */
+    }
+
 
     nav {
       background-color: var(--accent-color);
       padding: 10px;
       text-align: center;
+
     }
 
     nav a {
@@ -92,12 +85,14 @@
       display: inline-block;
       padding: 5px 10px;
       border-radius: 5px;
+
     }
 
     nav a:hover {
       background-color: var(--hover-bg-color);
       color: black;
       text-decoration: none;
+
     }
 
 
@@ -469,29 +464,55 @@
     });
   });
 
-  //Sticky navbar
-  // Get the navbar element
+  // Sticky navbar
   const navbar = document.getElementById("stayOnTop");
+  let cloneNavbar = null; // This will hold the cloned navbar
 
   // Get the initial offset of the navbar from the top
   const sticky = navbar.offsetTop;
   // Define the scroll threshold (in pixels) for activation
   const scrollThreshold = 200;
-  // Function to make the navbar sticky
+
+  // Function to handle the sticky navbar behavior
   function stickyNavbar() {
     if (window.scrollY >= sticky + scrollThreshold) {
-      navbar.style.position = "fixed";
-      navbar.style.top = "0";
-      navbar.style.width = "100%";
+      if (!cloneNavbar) {
+        // Create a clone if it doesn't exist
+        cloneNavbar = navbar.cloneNode(true);
+        cloneNavbar.id = "stayOnTopClone"; // Give a unique ID to the clone
+        cloneNavbar.classList.add("sticky-clone");
+
+        // Set the initial hidden state
+        cloneNavbar.style.opacity = "0";
+        cloneNavbar.style.transform = "translateY(-100%)";
+
+        // Append the clone to the body
+        document.body.appendChild(cloneNavbar);
+
+        // Trigger the animation in the next frame
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            cloneNavbar.style.transform = "translateY(0)"; // Slide in
+            cloneNavbar.style.opacity = "1"; // Fade in
+          });
+        });
+      }
     } else {
-      navbar.style.position = "static"; // Default position
+      // Remove the cloned navbar on scroll up
+      if (cloneNavbar) {
+        cloneNavbar.style.transform = "translateY(-100%)"; // Slide out
+        cloneNavbar.style.opacity = "0"; // Fade out
+        setTimeout(() => {
+          cloneNavbar.remove();
+          cloneNavbar = null;
+        }, 500); // Match the transition duration
+      }
     }
   }
 
-  // Add event listener to scroll
-  window.onscroll = function() {
-    stickyNavbar();
-  };
+  // Attach the scroll event listener
+  window.addEventListener("scroll", stickyNavbar);
+
 </script>
 </body>
 </html>
