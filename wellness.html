@@ -28,24 +28,25 @@
     }
 
     /* voor als je geen bg image gebruikt */
-    body {
+    /*body {
       font-family: "NettoOT",serif;
       background-color: var(--bg-color);
       color: var(--text-color);
       line-height: 1.6;
-    }
+    }*/
 
 
     /* voor als je background image wilt gebruiken */
-    /* body {
+     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-image: url('/img/Portino_wellness.jpg');
+      background-image: url('/img/IMG_3759.jpeg');
+      background-image: url('/img/IMG_3759.jpeg');
       background-size: cover;
       background-attachment: fixed;
       background-position: center;
     }
-    */
+
 
     header {
       background-color: var(--header-color);
@@ -203,6 +204,11 @@
     #backToTop:hover {
       background-color: #0056b3;
     }
+
+    img{
+      max-height: 500px;
+      width: auto;
+    }
   </style>
 </head>
 <body>
@@ -216,6 +222,8 @@
   <a href="#how-to-book">Registreren</a>
   <!-- <a href="#how-to-2fa">2FA authenticatie</a>  in mijn ogen overbodig !-->
   <a href="#reserveren">Reserveren</a>
+  <a href="#Annuleren">Annuleren</a>
+  <a href="#shortcut">Snelkoppeling Maken</a>
   <a href="#lopende-acties">Lopende Acties</a>
   <a href="https://outlook.office365.com/book/PORTINOWELLNESS@residentie-portino.be">App</a>
 </nav>
@@ -408,20 +416,90 @@
       </ul>
     </li>
     <li>Eens ingevuld, zal u een controle-code via mail ontvangen die u in de reservatie-app dient in te vullen ter bevestiging. Het gebruik van de app is intuïtief. Een bevestigingsmail van de reservatie wordt naar het door u opgegeven emailadres verstuurd alsook naar uw uniek controle emailadres* (dit om misbruik te vermijden).</li>
+    <li>Als u geen controle-code via mail ontvangt (dit gebeurt vrijwel onmiddellijk nadat u de reservatie heeft aangemaakt), kijk dan of de mail niet in uw spam of junk mail map is terecht gekomen. Markeer desgevallend de mail als “Not Junk”.</li>
   </ul>
 
-  <h2>Code-Clavier toegang Wellness</h2>
-  <p>Het aanbrengen van een code-clavier om de wellness te betreden is nog lopende (Smart Door Lock System). Eens aangebracht - wij informeren u hier tijdig over – zal u alleen nog door het ingeven van een unieke reservatie-code op het code-clavier de wellness kunnen betreden.</p>
-  <p>Eens van toepassing zal deze unieke code opgenomen worden in de bevestigingsmail die u na reservatie zal ontvangen. Het ingeven van uw unieke reservatie-code zal u toegang verschaffen tijdens het gereserveerde tijdslot.</p>
-  <p>Zolang dit code-clavier nog niet geplaatst is kunt u de wellness betreden met de sleutel van uw appartement. Uiteraard rekenen wij op uw discipline dat dit enkel gebeurt na reservatie. Weet dat het systeem sowieso de activaties van Sauna en Haman registreert (onderhoudsdoeleinden).</p>
-  <p>Een bordje “Vrij/bezet” zal aan de deur voorzien worden. Gelieve dit bij het binnen- en buitengaan correct in te stellen.</p>
+  <h2 id="Annuleren">Annuleren</h2>
+  <h3>Reservatie annuleren of opnieuw plannen</h3>
+  <p>Het is steeds mogelijk om een reservatie te annuleren of opnieuw te plannen. Dit kan u op 2 manieren doen (het is aangeraden om dit uit te voeren vanaf een PC):</p>
+  <h4>Via de bevestigingsmail</h4>
+  <p>
+    Raadpleeg de bevestigingsmail die u ontvangen heeft, en druk op de “Opnieuw plannen” knop:
+    <img src="/img/reservatie1.png" alt="Voorbeeld knop 'Opnieuw plannen'">
+  </p>
+  <p>
+    Als alles goed verloopt zal er opnieuw een browser venster geopend worden. Indien nodig (bv. gebruikt u niet uw standaard browser of heeft u een “InPrivate” of “Incognito” browser venster gebruikt voor de reservatie)
+    dan kan u ook de link achter de knop kopiëren en in een (ander) browser venster plakken, aangezien u steeds vanuit de browser sessie moet werken waarmee u de reservatie heeft gemaakt en waarmee u heeft ingelogd.
+    De link kopiëren kan u doen door met de rechtermuisknop op de knop te klikken.
+  </p>
+  <p>
+    U kan de reservatie opnieuw plannen in een ander tijdslot of annuleren. Dit kan uiteraard niet retroactief; in dit laatste geval zullen de knoppen niet meer actief of zichtbaar zijn.
+  </p>
+  <img src="/img/reservatie2.png" alt="ander tijdslot">
+  <h4>Via de afspraak in de agenda</h4>
+  <p>
+    Als u een agenda gebruikt (bv. Outlook), dan kan normaal gezien ook de meegestuurde agenda uitnodiging terugvinden.
+    Als u deze in de agenda opent, dan zal u de inhoud kunnen oproepen, en hierin moet u ook een knop “Manage Booking” kunnen terugvinden.
+    De juiste plaats waar de inhoud van de afspraak terug te vinden is hangt af van de (kalender) app die u gebruikt op PC of smartphone.
+  </p>
+  <p>Hieronder een voorbeeld van de Outlook app op een iPhone:</p>
+  <img src="/img/reservatie3.png" alt="Voorbeeld van Outlook app op een iPhone">
+  <img src="/img/reservatie4.png" alt="">
+  <p>Voorbeeld van Outlook op PC:</p>
+  <img src="/img/reservatie5.png" alt="Voorbeeld van Outlook app op PC">
+  <p>Let er hier ook op dat u via de link terecht komt in dezelfde browser of browser sessie waarmee u de reservatie heeft gemaakt. Dit heeft te maken met de inloggegevens die nodig zijn en opgeslagen worden in de browser (zie hierboven).</p>
 
-  <h2>Duur van een Wellness sessie</h2>
+  <h2 id="shortcut">Een reservatie app (snelkoppeling) maken op de smartphone</h2>
+  <p>
+    Voor de gebruikers van een iPhone en indien gewenst is het ook mogelijk om een snelkoppeling (Shortcut) in de vorm van een App op de smartphone te zetten.
+    Het is mogelijk dat een soortgelijke methode ook bestaat voor Android-gebaseerde smartphones.
+  </p>
+  <p>U gebruikt hiervoor de Apple Shortcuts App (Search: Shortcuts):</p>
   <ul>
-    <li>Momenteel is de agenda zo ingesteld dat een reservatie automatisch voor 2 uur geldig is.</li>
-    <li>De wellness is toegankelijk van 8u tot 22u. De laatste reservatie is mogelijk om 20u.</li>
-    <li>Looptijden van reservaties en systemen zijn vast geprogrammeerd. Deze instellingen kunnen - na uittesten van het systeem – in overleg bijgestuurd worden.</li>
+    <li>•	Druk op het + teken naast de “Starter Shortcuts”</li>
+    <img src="/img/shortcut1.png" alt="" class="screenshot">
+    <li>•	In “New Shortcut”, typ “Chrome” (of andere browsernaam zoals Edge, Firefox, Brave, ..naar keuze) in het “Search” veld en vervolgens kies je “Open URLs in Chrome” </li>
+    <img src="img/shortcut2.png" alt="">
+    <img src="img/shortcut3.png" alt="">
+    <li>•	Vul de URL in door op “URL” te klikken en volgende link hierin te plakken:
+      <a href="https://outlook.office.com/book/PORTINOWELLNESS@residentie-portino.be">Link</a>
+    </li>
+    <img src="img/shortcut4.png" alt="" class="screenshot">
+    <li>•	Klik bovenaan op “Open URLs in Chrome”, en kies “Rename” en vul “Portino Wellness” in.</li>
+    <img src="img/shortcut5.png" alt="">
+    <img src="img/shortcut6.png" alt="">
+    <li>Klik terug bovenaan op “Portino Wellness” en kies “Choose Icon”. Selecteer het rechtersymbool en kies een kleur. In het zoek veld, typ “brain” om selecteer het volgende icoontje:
+      <img src="img/shortcut7.png">Druk daarna op "done" in de rechter bovenhoek</li>
+    <img src="img/shortcut8.png" alt="">
+    <img src="img/shortcut9.png" alt="">
+    <img src="img/shortcut10.png" alt="">
+    <li>Je hebt nu een “Shortcut” “Portino Wellness” aangemaakt. Druk vervolgens op de 3 puntjes in “Portino Wellness” (1), vervolgens klik je bovenaan op “Portino Wellness”  (2) en selecteer “Add to Home Screen” (3). Druk op “Add” (3).</li>
+    <img src="img/shortcut11.png" alt="">
+    <img src="img/shortcut12.png" alt="">
+    <img src="img/shortcut13.png" alt="">
+    <li>Er zal nu een “Shortcut” in de vorm van een App verschijnen op je smartphone scherm. Je kan deze “App” vanaf nu gebruiken om een reservatie te maken. Let wel: annuleren kan niet via deze App knop, maar kan/moet je doen via de methode die werd uitgelegd in “Reservatie annuleren of opnieuw plannen”.</li>
+    <img src="img/shortcut14.png" alt="">
   </ul>
+
+  <h3>Code-Clavier toegang Wellness</h3>
+  <p>
+    Het aanbrengen van een code-clavier om de wellness te betreden is nog lopende (Smart Door Lock System). Eens aangebracht - wij informeren u hier tijdig over –
+    zal u alleen nog door het ingeven van een unieke reservatie-code op het code-clavier de wellness kunnen betreden.
+  </p>
+  <p>
+    Zolang dit code-clavier nog niet geplaatst is kunt u de wellness betreden met de sleutel van uw appartement. Uiteraard rekenen wij op uw discipline dat dit enkel gebeurd na reservatie.
+    Weet dat het systeem sowieso de activaties van Sauna en Haman registreert (onderhoudsdoeleinden).
+  </p>
+  <p>
+    Een bordje “Vrij/bezet” zal aan de deur voorzien worden. Gelieve dit bij het binnen- en buitengaan correct in te stellen.
+  </p>
+
+  <h3>Duur van een Wellness sessie</h3>
+  <p>
+    Momenteel is de agenda zo ingesteld dat een reservatie automatisch voor 2u geldig is. De wellness is toegankelijk van 8u tot 22u. De laatste reservatie is mogelijk om 20u.
+    Looptijden van reservaties en systemen zijn vast geprogrammeerd. Deze instellingen kunnen - na uittesten van het systeem – in overleg bijgestuurd worden.
+  </p>
+
   <h2 id="lopende-acties">Wellness - Lopende Acties</h2>
   <ul>
     <li>Er loopt momenteel nog een heikele correctieve actie: de hoofdteller van de wellness dient door de energie-leverancier verzwaard te worden. Daarom is momenteel enkel de Sauna actief. Van zodra de nodige aanpassingen doorgevoerd zijn zullen zowel de sauna als de Hamam tegelijk kunnen gebruikt worden.</li>
@@ -438,7 +516,8 @@
     <li>Wij zitten in een opstart &amp; testfase. Jullie constructieve feedback (via onze VME-Whatsapp) is welkom. Wij doen ons best om alle nog openstaande punten of aanpassingen zo snel mogelijk door te voeren. Feedback voor de Wellness reservatie app kan ook per email verstuurd worden naar <a href="mailto:admin.portino@residentie-portino.be">admin.portino@residentie-portino.be</a>.</li>
     <li>De wellness zal regelmatig gepoetst worden. Momenteel is dit gepland om de 14 dagen. De frequentie zal naar de toekomst toe afgestemd worden volgens noodzaak. Evenwel wordt iedereen geacht de wellness in zijn geheel netjes te houden alsook correct en met respect te gebruiken.</li>
   </ul>
-  <p style="text-align: center"><b>ENJOY !</b></p>
+
+  <h2 style="text-align: center">ENJOY!</h2>
   <div id="backToTop">↑ Back to Top</div>
 </main>
 <footer>
